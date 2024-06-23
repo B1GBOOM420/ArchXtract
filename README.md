@@ -1,4 +1,4 @@
-<img src="https://drive.google.com/file/d/1hz4_v3gEtYWlFS8sxDMKth2cxG5gu3uF/view?usp=sharing" alt="ArchXtract Logo" align="right">
+<img src="ArchXtract.png" alt="ArchXtract Logo" style="float: right;">
 
 # ArchXtract
 ### A Command Line Tool for Extracting Multiple Archives At Once
