@@ -1,4 +1,4 @@
-<img src="https://imgur.com/a/2rYi4TY" alt="ArchXtract Logo" style="float: right;">
+<img src="https://imgur.com/a/2rYi4TY" alt="ArchXtract Logo" align="right">
 
 # ArchXtract
 ### A Command Line Tool for Emulation Enthusiasts
