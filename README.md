@@ -9,12 +9,12 @@
 **What is ArchXtract?**
 ArchXtract is a command line tool designed to expedite the processing of downloaded games for emulation. As an avid emulation enthusiast, I created this tool to simplify the tedious process of extracting and organizing game files.
 
-**The script works as follows:**
-1. It lists the folders in the current directory and prompts the user to select one.
-2. It loops through all files in the selected folder and extracts 7z and zip archives using multithreading.
-3. It waits for all extraction tasks to be completed.
-4. It deletes the extracted archives and any txt files.
-5. It asks the user if they want to continue.
+**The script currently works as such:**
+1. Select you options in the config.yaml and save
+2. It lists the folders in the current directory and prompts the user to select one.
+3. It loops through all files in the selected folder and extracts only the archive types you specified in the settings, using multithreading.
+4. It waits for all extraction tasks to be completed.
+5. It deletes any files you have specified in the settings
 
 **Code Overview**
 The code is written in Python and uses the following libraries:
@@ -23,6 +23,7 @@ The code is written in Python and uses the following libraries:
 * `py7zr` for 7z archive extraction
 * `zipfile` for zip archive extraction
 * `concurrent.futures` for multithreading
+* `pyYAML` for config file
 
 **How Does it Work?**
 ArchXtract is designed to process archive files in the following directory structure:
@@ -50,6 +51,9 @@ ArchXtract is designed to process archive files in the following directory struc
 ```
 
 ---
+
+**Have Suggestions?**
+Please feel free to open an issue - and I would be happy to hear you out and see what we can make happen, even if you don't want to commit code directly.
 
 **Why Contribute?**
 ArchXtract is a side project that I am passionate about, and it has the potential to benefit the emulation community. However, as a solo developer, I face limitations in terms of time and expertise. By contributing to ArchXtract, you can help:
