@@ -1,0 +1,40 @@
+### Master Settings For ArchXtract: Build # 062524 / Beta
+
+###
+### As this project grows, I will try my best to keep as many things accesable here in the settings
+### - B1GBOOM 06-24-2024 | 01:48 AM
+###
+
+
+#######################################
+###### ~~ Extraction Settings ~~ ######
+#######################################
+extract_7z_archives: False
+extract_zip_archives: False
+extract_rar_archives: False
+extract_tar_archives: False
+extract_gzip_archives: False
+
+
+
+
+#######################################
+###### ~~ Deleteion Settings ~~ #######
+####### ~~ USE WITH CAUTION ~~ ########
+### ~~ CHECK TWICE - LAUNCH ONCE ~~ ###
+#######################################
+delete_7z_archives: False
+delete_zip_archives: False
+delete_rar_archives: False
+delete_tar_archives: False
+delete_gzip_archives: False
+
+delete_txt_files: False
+
+
+
+
+#######################################
+#### ~~ Cores / Worker Settings ~~ ####
+#######################################
+max_workers: 5
