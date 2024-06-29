@@ -1,56 +1,64 @@
 <img src="ArchXtract.png" alt="ArchXtract Logo" style="float: right;">
 
 # ArchXtract
-### A Command Line Tool for Extracting Multiple Archives At Once
----
-#### Written by Fred B | B1GBOOM - 2024
+![Static Badge](https://img.shields.io/badge/Beta%20Build-062724-blue?style=plastic)
 
+ArchXtract is a powerful Python tool designed to automate the extraction and management of various archive file formats. It supports `.7z`, `.zip`, `.rar`, `.gz`, and `.tar` files, making it a versatile solution for handling compressed data. The tool can also be configured to delete extracted archives, as well as other specified file types, after extraction.
 
-**What is ArchXtract?**
-ArchXtract is a command line tool designed to expedite the processing of downloaded games for emulation. As an avid emulation enthusiast, I created this tool to simplify the tedious process of extracting and organizing game files.
+## Features
 
-**The script currently works as such:**
-1. Select you options in the config.yaml and save
-2. It lists the folders in the current directory and prompts the user to select one.
-3. It loops through all files in the selected folder and extracts only the archive types you specified in the settings, using multithreading.
-4. It waits for all extraction tasks to be completed.
-5. It deletes any files you have specified in the settings
-
-**Code Overview**
-The code is written in Python and uses the following libraries:
-
-* `os` for file system operations
-* `py7zr` for 7z archive extraction
-* `zipfile` for zip archive extraction
-* `concurrent.futures` for multithreading
-* `pyYAML` for config file
-
-**How Does it Work?**
-ArchXtract is designed to process archive files in the following directory structure:
-```
-+-- Root Dir
---- ArchXtract.py
-|
-+-- GameCube
-| |
-| +-- game.7z
-| +-- game.7z
-| +-- game.7z
-|
-+-- N64
-| |
-| +-- game.7z
-| +-- game.7z
-| +-- game.7z
-|
-+-- ECT
-  +-- any
-  +-- zip/7z
-  +-- archive
-
-```
+- **Multi-format Support**: Extracts `.7z`, `.zip`, `.rar`, `.gz`, and `.tar` archives.
+- **Concurrent Processing**: Utilizes a thread pool for efficient multi-threaded extraction.
+- **Configurable**: Settings managed through a `config.yaml` file.
+- **Automated Cleanup**: Optional deletion of extracted files and other specified file types.
 
 ---
+
+## Dependencies
+`py7zr`
+`zipfile`
+`rarfile`
+`gzip`
+`tarfile`
+`yaml`
+
+#### Install dependencies using:
+`pip install py7zr rarfile pyyaml`
+
+---
+
+## Usage
+
+1. **Configure Settings**: Edit the `config.yaml` file to specify which archive types to extract and whether to delete files post-extraction.
+2. **Run the Script**: Execute `ArchXtract-Beta.py` and select the folder containing your archive files.
+3. **Extraction and Cleanup**: The script will extract all supported archives and optionally delete them based on your configuration.
+
+---
+
+## Configuration
+
+The `config.yaml` file should include the following settings:
+
+```yaml
+extract_7z_archives: true
+extract_zip_archives: true
+extract_rar_archives: true
+extract_gz_archives: true
+extract_tar_archives: true
+
+delete_7z_archives: false
+delete_zip_archives: false
+delete_rar_archives: false
+delete_gz_archives: false
+delete_tar_archives: false
+delete_txt_files: false
+
+max_workers: 5
+```
+
+
+---
+## Always Looking To Improve
 
 **Have Suggestions?**
 Please feel free to open an issue - and I would be happy to hear you out and see what we can make happen, even if you don't want to commit code directly.
@@ -70,5 +78,10 @@ If you're interested in contributing, please:
 * Create a new branch for your feature or fix
 * Submit a pull request with a clear description of your changes
 
-**Thank You**
-I appreciate your interest in ArchXtract and look forward to collaborating with you to make this tool a valuable resource for the emulation community.
+>**Thank You**
+I appreciate your interest in ArchXtract and look forward to collaborating with you to make this tool a valuable resource for the emulation community. - *B1GBOOM*
+
+---
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
